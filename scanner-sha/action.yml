@@ -1,0 +1,10 @@
+name: scanner-sha
+description: Same as scanner, but pins its internal dependency by commit SHA (hardened provider style).
+runs:
+  using: composite
+  steps:
+    - uses: bearone236/actions-lock-sandbox-upstream/setup-tool@26d0722ba1c61309c38eb85e999ffa02a6d51265 # v1.0.0
+    - shell: bash
+      run: |
+        echo "scanner-sha: SAFE (v1.1.0)"
+        echo "- scanner-sha: SAFE (v1.1.0)" >> "$GITHUB_STEP_SUMMARY"
