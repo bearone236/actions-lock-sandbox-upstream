@@ -1,0 +1,10 @@
+name: scanner
+description: Demo "scanner" action that internally uses setup-tool, like trivy-action uses setup-trivy.
+runs:
+  using: composite
+  steps:
+    - uses: bearone236/actions-lock-sandbox-upstream/setup-tool@v1.0.0
+    - shell: bash
+      run: |
+        echo "scanner: SAFE (v1.0.0)"
+        echo "- scanner: SAFE (v1.0.0)" >> "$GITHUB_STEP_SUMMARY"

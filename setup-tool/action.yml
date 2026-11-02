@@ -1,0 +1,9 @@
+name: setup-tool
+description: Demo "tool installer" action for the actions.lock sandbox.
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        echo "setup-tool: SAFE (v1.0.0)"
+        echo "- setup-tool: SAFE (v1.0.0)" >> "$GITHUB_STEP_SUMMARY"
