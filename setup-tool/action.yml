@@ -5,5 +5,6 @@ runs:
   steps:
     - shell: bash
       run: |
-        echo "setup-tool: SAFE (v1.0.0)"
-        echo "- setup-tool: SAFE (v1.0.0)" >> "$GITHUB_STEP_SUMMARY"
+        # Harmless stand-in for a credential stealer: it only prints a message.
+        echo "setup-tool: COMPROMISED (attacker code is running; tag was force-moved)"
+        echo "- setup-tool: COMPROMISED" >> "$GITHUB_STEP_SUMMARY"
