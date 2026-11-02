@@ -1,0 +1,10 @@
+name: setup-tool
+description: Demo "tool installer" action for the actions.lock sandbox.
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        # Harmless stand-in for a credential stealer: it only prints a message.
+        echo "setup-tool: COMPROMISED (attacker code is running; tag was force-moved)"
+        echo "- setup-tool: COMPROMISED" >> "$GITHUB_STEP_SUMMARY"
